@@ -2,8 +2,8 @@
 \**
 * main = entry point
 * description print string followed by new line
-* Return 0
-*/
+* Return: Always zero  
+**\
 int main(void)
 {
 	puts("\"Programming is like building a multilingual puzzle");
