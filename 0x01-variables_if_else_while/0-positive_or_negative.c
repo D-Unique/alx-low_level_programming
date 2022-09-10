@@ -9,9 +9,11 @@
  * Return: 0 if successful
  */
 int main(void)
+	/* Main: run and return 0 */
 	{
 		int n;
 		srand(time(0));
+
 		n = rand() - RAND_MAX / 2;
 		/*
 		 * your code goes there
