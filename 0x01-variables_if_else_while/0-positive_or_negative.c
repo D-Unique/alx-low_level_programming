@@ -2,7 +2,7 @@
 #include <time.h>
 #include <stdio.h>
 /*
- * main- Entry point
+ * main - Entry point
  * Description: using the main function
  * this program prints (zero, negetive or positive)
  * Return: 0 if successful
@@ -10,7 +10,7 @@
 
 int main(void)
 	/*
-	 * function Main: run and return 0
+	 * Main- run and return 0
 	 */
 	{
 		int n;
