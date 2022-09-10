@@ -7,6 +7,7 @@
  * this program prints (zero, negetive or positive)
  * Return: 0 if successful
  */
+
 int main(void)
 	/*
 	 * function Main: run and return 0
