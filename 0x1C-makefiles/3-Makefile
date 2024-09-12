@@ -1,0 +1,30 @@
+NAME = school
+CC = gcc
+SRC = school.c main.c
+OBJ = $(SRC:.c=.o)
+RM = rm -f
+
+
+all: $(NAME)
+
+#The $^ variable represents the list of dependencies (object files in this case)
+#$@ represents the target itself (the executable name)
+
+$(NAME): $(OBJ)
+	$(CC) -o $@ $^
+
+#rule automatically detects and rebuilds object files if their corresponding source files have changed.
+#$< represents the source file, and $@ represents the object file.
+%.o: %.c
+	$(CC) -c $< -o $@
+
+clean:
+	$(RM) *~
+
+oclean:
+	$(RM) *.o
+
+fclean:
+	$(RM) *~ school
+
+re: oclean all
