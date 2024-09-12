@@ -1,13 +1,7 @@
 SRC = main.c school.c
-OBJ = $(SRC:.c=.o)
+OBJ = $(SRC:%.c=%.o)
 CC = gcc
 NAME = school
 
 all: $(OBJ)
-	$(CC) -o $(NAME) $^
-
-%.o: %.c
-	$(CC) -c $< -o $@
-
-clean:
-	rm -f *.o *.exe school
+	$(CC) $(OBJ) -o $(NAME)
