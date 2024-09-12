@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 """This module define a function that gives the perimeter of an island"""
 
+
 def island_perimeter(grid):
     """this function returns the perimeter of the island described in grid"""
-   
     height = len(grid)
     width = len(grid[0])
     size = 0
