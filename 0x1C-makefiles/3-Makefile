@@ -5,16 +5,9 @@ OBJ = $(SRC:.c=.o)
 RM = rm -f
 
 
-all: $(NAME)
+all: $(OBJ)
+		$(CC) -o $(NAME) $^
 
-#The $^ variable represents the list of dependencies (object files in this case)
-#$@ represents the target itself (the executable name)
-
-$(NAME): $(OBJ)
-	$(CC) -o $@ $^
-
-#rule automatically detects and rebuilds object files if their corresponding source files have changed.
-#$< represents the source file, and $@ represents the object file.
 %.o: %.c
 	$(CC) -c $< -o $@
 

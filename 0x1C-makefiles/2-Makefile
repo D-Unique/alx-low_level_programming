@@ -3,16 +3,11 @@ OBJ = $(SRC:.c=.o)
 CC = gcc
 NAME = school
 
-all: $(NAME)
-
-$(NAME): $(OBJ)
-	$(CC) -o $@  $^
+all: $(OBJ)
+	$(CC) -o $(NAME) $^
 
 %.o: %.c
 	$(CC) -c $< -o $@
 
 clean:
 	rm -f *.o *.exe school
-
-#The $^ variable represents the list of dependencies (object files in this case)
-#$@ represents the target itself (the executable name)
