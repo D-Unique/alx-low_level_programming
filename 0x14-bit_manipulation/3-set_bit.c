@@ -16,7 +16,7 @@ if (index >= sizeof(*n) * 8)
 return (-1);
 }
 
-*n = *n | ((bitmask << index) | 1);
+*n = *n | ((bitmask << index));
 return (1);
 }
 
